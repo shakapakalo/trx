@@ -1,1 +1,220 @@
-This is the updated content.
+import random
+import uuid
+
+
+# PRO UPDATE
+
+def update():
+    return ('0.0.15')
+
+def generate_user_agent1():
+    samsung_models = [
+        "SM-G960F|G960FXXU9FUD1",
+        "SM-N975U|N975U1UES3DTA6",
+        "SM-A515G|A515GUBU2BUD8",
+        "SM-M325F|M325FXXU3CUH5",
+        "SM-F926U|F926U1UES1DUG7",
+        "SM-G975F|G975FXXU4CUH5",
+        "SM-N976B|N976BXXU5AUF1",
+        "SM-A215F|A215FXXU3AUG5",
+        "SM-F727B|F727BXXU2ATG3",
+        "SM-G999U|G999USQS2DUE2",
+        "SM-N982U|N982USQS1DUF3",
+        "SM-A918B|A918BXXU5DUH1",
+        "SM-A014M|A014MUBU2ATG3",
+        "SM-A337B|A337BXXU1AUG5",
+        "SM-G970F|G970FXXU9FUD2",
+        "SM-N970U|N970U1UES3DTA7",
+        "SM-A725G|A725GUBU2AUF2",
+        "SM-M415F|M415FXXU3CUH6",
+        "SM-F936U|F936U1UES1DUG8",
+        "SM-G976F|G976FXXU4CUH6",
+        "SM-N977B|N977BXXU5AUF2",
+        "SM-A225F|A225FXXU3AUG6",
+        "SM-F737B|F737BXXU2ATG4",
+        "SM-G900U|G900U1UES3DTD5",
+        "SM-N900F|N900FXXU6DTI5",
+        "SM-A715F|A715FXXU3CUH7",
+        "SM-M425F|M425FXXU3CUH7",
+        "SM-F946U|F946U1UES1DUG9",
+        "SM-G986F|G986FXXU5DUG5",
+        "SM-N987B|N987BXXU5AUF3",
+        "SM-A235F|A235FXXU3AUG7",
+        "SM-F747B|F747BXXU2ATG5",
+    ]
+    model_,build = random.choice(samsung_models).rsplit('|')
+    os_v = random.randint(4, 13)
+    fbav = f"{os_v}.0.{random.randint(111, 999)}.{random.randint(111, 999)}"
+    ua = ('[FBAN/Orca-Android;FBAV/'+str(fbav)+';FBPN/com.facebook.orca;FBLC/en_US;FBBV/'+str(random.randint(111111111,999999999))+';FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/'+str(model_)+'/7.3.9;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=810,height=1704};FB_FW/1;]')
+    return ua
+
+def generate_user_agent2():
+    samsung_devices = [
+    "SM-G920F|NRD90M",
+    "SM-T535|LRX22G",
+    "SM-T231|KOT49H",
+    "SM-J320F|LMY47V",
+    "GT-I9190|KOT49H",
+    "GT-N7100|KOT49H",
+    "SM-T561|KTU84P",
+    "GT-N7100|KOT49H",
+    "GT-I9500|LRX22C",
+    "SM-J320F|LMY47V",
+    "SM-G930F|NRD90M",
+    "SM-J320F|LMY47V",
+    "SM-J510FN|NMF26X",
+    "GT-P5100|IML74K",
+    "SM-J320F|LMY47V",
+    "SAMSUNG|SM-T280",
+    "SM-T531|LRX22G",
+    "SPH-L720|KOT49H",
+    "GT-I9500|JDQ39",
+    "SM-G935F|NRD90M",
+    "SM-T561|KTU84P",
+    "SM-T531|KOT49H",
+    "SM-J320FN|LMY47V",
+    "SAMSUNG|SM-N920S",
+    "SM-A500FU|MMB29M",
+    "SM-A500F|MMB29M",
+    "SM-T311|KOT49H",
+    "SM-T531|LRX22G",
+    "SM-J320F|LMY47V",
+    "SAMSUNG|SM-G532F",
+    "SM-J320F|LMY47V",
+    "GT-P5210|KOT49H",
+    "SM-T230|KOT49H",
+    "GT-I9192|KOT49H",
+    "SM-T235|KOT4",
+    "GT-N7100|KOT49H",
+    "SM-A500F|LRX22G",
+    "SM-A500F|MMB29M",
+    "GT-N7100|KOT49H",
+    "SM-G920F|MMB29K",
+    "SM-J510FN|NMF26X",
+    "GT-N8000|JZO54K",
+    "SM-J320FN|LMY47V",
+    "SM-J320FN|LMY47V",
+    "SM-A500H|MMB29M",
+    "GT-I9300|JSS15J",
+    "GT-I9500|LRX22C",
+    "SM-J320F|LMY4",
+    "SM-J510FN|NMF26X",
+    "SM-A500F|MMB29M",
+    "SAMSUNG|SM-A500F",
+    "SM-T561|KTU84P",
+    "SM-G900F|KOT49H",
+    "GT-S7390|JZO54K",
+    "SM-J320F|LMY47V",
+    "GT-P5100|JZO54K",
+    "SM-A500FU|MMB29M",
+    "SM-G930F|NRD90M",
+    "SM-J510FN|NMF26X",
+    "SM-T561|KTU84P",
+    "GT-N8000|KOT49H",
+    "SM-T531|LRX22G",
+    "SM-J510FN|MMB29M",
+    "SAMSUNG|SM-J320F",
+    "SM-J320F|LMY47V",
+    "GT-P5110|JDQ39",
+    "GT-I9301I|KOT49H",
+    "SM-A500F|LRX22G",
+    "SM-G930F|NRD90M",
+    "SM-T311|KOT4",
+    "GT-P5200|KOT49H",
+    "GT-I9301I|KOT49H",
+    "SM-J320M|LMY47V",
+    "SM-T531|LRX22G",
+    "SM-T820|NRD90M",
+    "GT-I9192|KOT49H",
+    "SM-G935F|MMB29K",
+    "SM-J701F|NRD90M;",
+    "GT-I9301I|KOT4",
+    "SM-J320FN|LMY47V",
+    "SM-T111|JDQ39",
+    "SM-A500F|MMB29M",
+    "SM-J510FN|NMF2",
+    "SM-T705|LRX22G",
+    "SM-G920F|NRD90M",
+    "GT-N5100|JZO54K",
+    "GT-I9300I|KTU84P",
+    "GT-I9300I|KTU84P",
+    "SAMSUNG|SM-G532F",
+    "GT-N8000|KOT49H",
+    "SM-A500F|MMB29M",
+    "GT-I9190|KOT49H",
+    "SM-J510FN|NMF26X",
+    "SM-J320F|LMY47V",
+    "GT-P5100|JDQ39",
+    "SAMSUNG|SM-G920F",
+    "SAMSUNG|SM-J510FN",
+    "GT-N8000|KOT49H",
+    "GT-I9500|LRX22C",
+    "SM-J320FN|LMY47V",
+    "SM-A500F|MMB29M",
+    "GT-N8000|JZO54K",
+    "SM-T805|LRX22G",
+    "SM-T231|KOT49H",
+    "GT-N5100|JZO54K",
+    "SM-J320H|LMY47V",
+    "SM-T231|KOT49H",
+    "SM-G930F|NRD90M",
+    "SM-G935F|NRD90M",
+    "SM-T310|KOT49H",
+    "GT-N8000|KOT49H",
+    "SAMSUNG|SM-J320F",
+    "SAMSUNG|SM-A500F",
+    "SM-J510FN|NMF26X",
+    "SM-T705|LRX22G;",
+    "GT-P3110|JZO54K",
+    "GT-I9192|KOT49H",
+    "SM-J320F|LMY47V",
+    "SM-G920F|NRD90M",
+    "GT-I9300|IMM76D",
+    "SM-G950F|NRD90M",
+    "SM-J320F|LMY47V",
+    "SM-J510FN|NMF26X;",
+    "SAMSUNG|SM-A500F",
+    "SM-A500F|LRX22G",
+    "SM-T231|KOT49H",
+    "SM-T311|KOT49H",
+    "SM-J320FN|LMY47"]
+    model_,build = random.choice(samsung_devices).rsplit('|')
+    os_v = (f"{random.randint(1, 12)}.{random.randint(1, 9)}.{random.randint(1, 9)}")
+    fbav = f".{random.randint(111, 999)}..{random.randint(111, 999)}.0.{random.randint(111, 999)}.{random.randint(111, 999)}"
+    fbavc = f".{random.randint(111, 999)}..{random.randint(111, 999)}.0.{random.randint(111, 999)}.{random.randint(111, 999)}"
+    ua = (f"Dalvik/2.1.0 (Linux; Android {os_v}; {model_} Build/{build}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{fbavc} Mobile Safari/537.36 [FBAN/FB4A;FBAV/{fbav};FBCR/Teletalk;FBBV/{str(random.randint(111111111,999999999))};FBPN/com.facebook.mlite;FBMF/SAMSUNG;FBLC/en_US;FBDV/{model_};FBBD/SAMSUNG;FBSV/{os_v};FBOP/1;FBRV/0;FBCA/armeabi-v7a:armeabi;]")
+    return ua
+
+def generate_user_agent3():
+    omp=str(random.randint(101,303))
+    return "[FBAN/FB4A;FBAV/"+omp+".0.0.30.112;FBBV/367653576;FBDM/{density=2.25,width=720,height=1400};FBLC/en_Qaau_US;FBRV/369757394;FBCR/Vi India;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/RMX1945;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]"
+
+
+
+m1urllogin = ("https://b-graph.facebook.com/auth/login")
+m2urllogin = ("https://b-graph.facebook.com/auth/login")
+m3urllogin = ("https://b-graph.facebook.com/auth/login")
+
+
+
+
+
+
+
+method1headers = {'User-Agent': 'ua', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'graph.facebook.com', 'X-FB-Net-HNI': str(random.randint(30000, 40000)), 'X-FB-SIM-HNI': str(random.randint(30000, 40000)), 'X-FB-Connection-Type': 'MOBILE.LTE', 'Authorization': 'OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895', 'X-FB-Connection-Quality': 'MOBILE.LTE', 'X-FB-Connection-Bandwidth': str(random.randint(20000000, 30000000)), 'X-Tigon-Is-Retry': 'False', 'X-FB-Friendly-Name': 'ViewerReactionsMutation', 'X-FB-Request-Analytics-Tags': 'graphservice', 'X-FB-HTTP-Engine': 'Liger', 'X-FB-Client-IP': 'True', 'X-FB-Server-Cluster': 'True', 'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62'}
+
+method1data = data = {'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()), 'cpl': 'true', 'family_device_id': str(uuid.uuid4()), 'credentials_type': 'device_based_login_password', 'error_detail_type': 'button_with_disabled', 'source': 'register_api', 'email': 'uid', 'password': 'pw', 'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'generate_session_cookies': '1', 'meta_inf_fbmeta': 'NO_FILE', 'advertiser_id': str(uuid.uuid4()), 'currently_logged_in_userid': '0', 'locale': 'en_PK', 'client_country_code': 'PK', 'method': 'auth.login', 'fb_api_req_friendly_name': 'authenticate', 'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler', 'api_key': '882a8490361da98702bf97a021ddc14d'}
+
+
+method2headers = {'POST': '/auth/login HTTP/2', 'Host': 'b-graph.facebook.com', 'Priority': 'u=3, i', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'ua', 'X-Fb-Sim-Hni': '64301', 'X-Fb-Net-Hni': '64301', 'X-Fb-Connection-Quality': 'EXCELLENT', 'Zero-Rated': '0', 'Authorization': 'OAuth null', 'X-Fb-Connection-Bandwidth': '24807555', 'X-Fb-Connection-Type': 'MOBILE.LTE', 'X-Fb-Device-Group': '6060', 'X-Tigon-Is-Retry': 'False', 'X-Fb-Friendly-Name': 'authenticate', 'X-Fb-Request-Analytics-Tags': 'unknown', 'Accept-Encoding': 'gzip, deflate', 'X-Fb-Http-Engine': 'Liger', 'X-Fb-Client-Ip': 'True', 'X-Fb-Server-Cluster': 'True'}
+
+method2data = {'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()), 'email': 'uid', 'password': 'em', 'generate_analytics_claim': '1', 'community_id': '', 'cpl': 'true', 'try_num': '1', 'family_device_id': str(uuid.uuid4()), 'secure_family_device_id': str(uuid.uuid4()), 'sim_serials': f'["{str(random.randint(11111111111111111111,99999999999999999999))}"]', 'openid_flow': 'android_login', 'openid_provider': 'google', 'openid_emails': f'["{str(random.randint(1111,9999))}@gmail.com"]', 'openid_tokens': '["eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g"]', 'fb4a_shared_phone_cpl_experiment': 'fb4a_shared_phone_nonce_cpl_at_risk_v3', 'fb4a_shared_phone_cpl_group': 'enable_v3_at_risk', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'error_detail_type': 'button_with_disabled', 'source': 'account_recovery', 'generate_machine_id': '1', 'jazoest': f'{str(random.randint(1111,9999))}', 'meta_inf_fbmeta': 'V2_UNTAGGED', 'advertiser_id': str(uuid.uuid4()), 'encrypted_msisdn': '', 'currently_logged_in_userid': '0', 'locale': 'en_US', 'client_country_code': 'US', 'fb_api_req_friendly_name': 'autheticate', 'fb_api_caller_class': 'Fb4aAuthHandler', 'api_key': '882a8490361da98702bf97a021ddc14d', 'access_token': '256002347743983|374e60f8b9bb6b8cbb30f78030438895'}
+
+
+
+
+method3headers = {'User-Agent': "ua", 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'graph.facebook.com', 'X-FB-Net-HNI': str(random.randint(30000, 40000)), 'X-FB-SIM-HNI': str(random.randint(30000, 40000)), 'X-FB-Connection-Type': 'MOBILE.LTE', 'X-Tigon-Is-Retry': 'False', 'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62', 'x-fb-device-group': '5120', 'X-FB-Friendly-Name': 'ViewerReactionsMutation', 'X-FB-Request-Analytics-Tags': 'graphservice', 'X-FB-HTTP-Engine': 'Liger', 'X-FB-Client-IP': 'True', 'X-FB-Server-Cluster': 'True', 'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62', 'Content-Length': '706'}
+
+
+method3data = {'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()), 'cpl': 'true', 'family_device_id': '128c25e2-a119-4956-98fb-9fe925fb703d', 'credentials_type': 'device_based_login_password', 'error_detail_type': 'button_with_disabled', 'source': 'device_based_login', 'email': 'uid', 'password': 'pw', 'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'generate_session_cookies': '1', 'meta_inf_fbmeta': '', 'advertiser_id': str(uuid.uuid4()), 'currently_logged_in_userid': '0', 'locale': 'en_US', 'client_country_code': 'US', 'method': 'auth.login', 'fb_api_req_friendly_name': 'authenticate', 'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler', 'api_key': '882a8490361da98702bf97a021ddc14d'}  
+
